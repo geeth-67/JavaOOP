@@ -1,17 +1,22 @@
 package RestaurantsManagementSystem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Customer {
 
-    int custID ;
-    String name ;
-    int age ;
+    private String customerID;
+    private String name;
+    private String phone;
+    private List<Order> orderHistory;
+    private Order currentOrder;
 
-    public Customer (int custID , String name , int age) {
+    public Customer ( String name , String phone) {
 
-        this.custID = custID ;
-        this.name = name ;
-        this.age = age ;
+        this.customerID = "Cust ID - " + name + Math.random();
+        this.name = name;
+        this.phone = phone;
+        this.orderHistory = new ArrayList<>();
+        this.currentOrder = new Order();
     }
-
-
 }
