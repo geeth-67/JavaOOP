@@ -41,6 +41,16 @@ public class Order {
         }
     }
 
+    public double getTotal () {
+
+        double total = 0.00;
+
+        for (OrderItem item : items) {
+            total += item.getSubTotal();
+        }
+        return total;
+    }
+
     public String getOrderId() {
         return orderId;
     }
