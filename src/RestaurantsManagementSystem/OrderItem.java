@@ -2,7 +2,7 @@ package RestaurantsManagementSystem;
 
 public class OrderItem {
 
-    private Product product ; // order item has a product
+    private Product product ; // order item has a product - composition
     private int quantity;
 
     public OrderItem ( Product product , int quantity) {
@@ -26,6 +26,7 @@ public class OrderItem {
     }
 
     public int getQuantity () {
+
         return this.quantity;
     }
 }
